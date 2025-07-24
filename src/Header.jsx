@@ -8,7 +8,7 @@ const Header = () => {
             </div>
             <div className="link">
                 <a href="/" className='linkicon'><i className="ri-map-pin-line"></i></a>
-                <p className='linktext'>Deliver to Jayanthan</p>
+                <p className='linktext'>Deliver to User</p>
                 <p className='linktext' style={{ fontSize: 13 }}><b>Karur 639006</b></p>
             </div>
             <div className="search">
@@ -35,7 +35,7 @@ const Header = () => {
             </div>
             <div className="account-section">
                 <p className="account-text">
-                    Hello, <strong>Jayanthan</strong><br />
+                    Hello, <strong>Guest</strong><br />
                     <span className="account-subtext">Account & Lists</span>
                 </p>
                 <p className="account-texts">
