@@ -1,0 +1,443 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c45500;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a94600;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* Container */
+.header {
+    height: 60px;
+    width: 100%;
+    background-color: #243040;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+/* Logo */
+.logo {
+    height: 40px;
+    width: 95px;
+}
+
+/* Navigation Bar */
+.navbar {
+    height: 40px;
+    width: 100%;
+    background-color: #131921;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+    font-family: "Amazon Ember", "Helvetica Neue", Arial, sans-serif;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.breadcrumb-all {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Rufus Button */
+.rufus-btn {
+    background-color: #ffffff;
+    color: #111;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 25px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.rufus-btn:hover {
+    background-color: #f3f3f3;
+}
+
+.rufus-icon {
+    height: 14px;
+    width: 14px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #232f3e;
+    border-radius: 4px;
+    color: #febd69;
+}
+
+/* Account Section */
+.account-section {
+    color: white;
+    font-size: 14px;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    text-align: left;
+    cursor: pointer;
+}
+
+.account-text {
+    line-height: 1.1;
+    font-size: 12px;
+    position: absolute;
+    top: 17px;
+}
+
+.account-subtext {
+    font-weight: bold;
+    display: flex;
+    position: relative;
+    font-size: 14px;
+    top: -2px;
+    left: 0;
+}
+
+.account-texts {
+    position: relative;
+    left: 130px;
+    font-size: 12px;
+}
+
+.account-texts .OrderText {
+    font-weight: bold;
+    color: #febd69;
+}
+
+/* Link Icon */
+.linkicon {
+    color: #fff;
+    position: relative;
+    top: 18px;
+    left: 8px;
+    text-decoration: none;
+}
+
+.linktext {
+    position: relative;
+    padding-left: 25px;
+    font-size: 12px;
+    top: -10px;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    color: #dddddd;
+}
+
+/* Search Bar */
+.search {
+    display: flex;
+    width: 840px;
+    height: 36px;
+    margin-right: 20px;
+}
+
+.search-dropdown {
+    width: 50px;
+    padding: 0 8px;
+    background-color: #f3f3f3;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-input {
+    flex: 1;
+    padding: 8px 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    min-width: 0;
+}
+
+.search-btn {
+    background-color: #febd69;
+    border: none;
+    padding: 0 14px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Language Dropdown */
+.language-dropdown {
+    width: 60px;
+    margin-left: -5px;
+    display: flex;
+    align-items: center;
+}
+
+.language-select {
+    width: 60px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.language-select:hover {
+    border-color: #999;
+}
+
+/* Cart Icon */
+.carticon {
+    color: #fff;
+    font-size: 24px;
+    position: relative;
+    top: 8px;
+    left: 130px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.carttext {
+    position: relative;
+    top: -8px;
+    left: 160px;
+    color: aliceblue;
+    font-size: small;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+
+/* Laptop Header */
+.LaptopHeader {
+    width: 100% !important;
+    height: 40px !important;
+    border-radius: 10px !important;
+    background-color: #ffffff !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.laptop-header {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.search-text {
+    font-weight: bold;
+    color: #cd5500;
+}
+
+.result-sort-dropdown {
+    padding: 4px 10px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.result-sort-dropdown:hover {
+    border-color: #999;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+}
+
+.Sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 16px;
+    overflow-y: scroll;
+    height: 100vh;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Amazon Ember', Arial, sans-serif;
+}
+
+.sidebar-section {
+    margin-bottom: 16px;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #111;
+}
+
+.section-options {
+    list-style: none;
+    padding-left: 0;
+}
+
+.option-item {
+    font-size: 13px;
+    color: #111;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.option-item label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-checkbox {
+    accent-color: #c45500; /* Amazon orange */
+    cursor: pointer;
+}
+
+.checkbox-label {
+    user-select: none;
+    font-size: 13px;
+    color: #007185;
+}
+
+.see-more .checkbox-label {
+    font-weight: bold;
+    color: #c45500;
+}
+
+/* Main */
+.content-area {
+    padding: 30px 20px;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    font-weight: 500;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #b12704;
+    margin-bottom: 10px;
+}
+
+.add-to-cart-btn {
+    background-color: #ffa41c;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #cc8500;
+}
