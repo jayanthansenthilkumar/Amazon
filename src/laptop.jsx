@@ -1,29 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
 import './laptop.css';
+import { colors } from '@mui/material';
 
 function Laptop(props) {
-    let [cart, setCart] = useState('Add to cart');
-    let [count, setCount] = useState(1);
-    function addtocart() {
-        if (cart == 'Add to cart') {
-            console.log('Added to cart');
-            setCart('In cart');
-        }
-    }
-    function add() {
-        setCount(prev => prev + 1);
-        console.log(count)
-    }
-    function remove() {
-        if (count > 1) {
-            setCount(prev => prev - 1);
-
-        } else {
-            setCart('Add to cart');
-            setCount(1);
-        }
-    }
+    const { count, onAddToCart, onUpdateCount } = props;
+    const handleAdd = () => onUpdateCount(count + 1);
+    const handleRemove = () => onUpdateCount(count - 1);
+    
 
     return (
         <div className="container">
@@ -39,12 +23,13 @@ function Laptop(props) {
                 </h3>
 
                 <button className="reviews">
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star"></span>
-                    <h6>{props.reviews}</h6>
+                    {Array.from({ length: 5 }, (_, i) => (
+                        <span
+                            key={i}
+                            className={`fa fa-star ${i < Math.round(props.rating) ? 'checked' : ''}`}
+                        ></span>
+                    ))}
+                    <h6><span style={{ color: 'black' }}>{props.reviews}</span></h6>
                 </button>
 
                 <button className="deals">Limited time deal</button>
@@ -74,33 +59,41 @@ function Laptop(props) {
                     <h5>Service: Device Setup</h5>
                 </div>
 
-
-                {cart === 'Add to cart' ? (
-                    <button className="buy" onClick={addtocart}>
+                {/* Add to Cart */}
+                {count === 0 ? (
+                    <button className="buy" onClick={onAddToCart}>
                         Add to cart
                     </button>
                 ) : (
                     <button className="buy" style={{ width: '115px' }}>
                         {count === 1 ? (
-                            <span onClick={remove} className="fa fa-trash"></span>
+                            <span
+                                onClick={handleRemove}
+                                className="fa fa-trash"
+                            ></span>
                         ) : (
-                            <span onClick={remove} className="fa fa-minus"></span>
+                            <span
+                                onClick={handleRemove}
+                                className="fa fa-minus"
+                            ></span>
                         )}
 
                         &nbsp;&nbsp;&nbsp;
                         <span className="count">{count}</span>&nbsp;&nbsp;&nbsp;
-                        <span onClick={add} className="fa fa-plus add"></span>
+                        <span
+                            onClick={handleAdd}
+                            className="fa fa-plus add"
+                        ></span>
                     </button>
                 )}
 
-
                 <div className="colors">
                     <div className="color-options">
-                        <div className="color-option" style={{ backgroundColor: props.color1  }}></div>
+                        <div className="color-option" style={{ backgroundColor: props.color1 }}></div>
                         <div className="color-option" style={{ backgroundColor: props.color2 }}></div>
                         <div className="color-option" style={{ backgroundColor: props.color3 }}></div>
                     </div>
-                </div>  
+                </div>
             </div>
         </div>
     );

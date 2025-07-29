@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({cartCount}) => {
     return (
         <>
             <div className="logo">
@@ -43,9 +43,9 @@ const Header = () => {
                 </p>
             </div>
             <div className="cart">
-                <a href="/" className="carticon">
+                <a className="carticon">
                     <i className="ri-shopping-cart-line"></i>
-                    <span className="cart-count">3</span>
+                    <span className="cart-count">{cartCount}</span>
                 </a>
                 <p className="carttext"><b>Cart</b></p>
             </div>
