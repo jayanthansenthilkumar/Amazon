@@ -13,10 +13,6 @@ function App() {
 
   return (
     <>
-      <Link to="/cart" >Cart</Link>
-      {/* <Routes>
-        <Route path="/cart" element={<Cart />} />
-      </Routes> */}
       <div className="header">
         <Header cartCount={cartCount} />
       </div>
