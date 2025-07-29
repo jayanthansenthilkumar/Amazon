@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import './laptop.css';
-import { colors } from '@mui/material';
 
 function Laptop(props) {
     const { count, onAddToCart, onUpdateCount } = props;
